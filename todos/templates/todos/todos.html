@@ -1,0 +1,36 @@
+{% extends 'todos/base.html' %}
+
+{% block title %}Todos{% endblock %}
+
+{% block content %}
+
+
+<ul>
+  {% for todo in todos%}
+    <li><b1>{{todo.id}} - {{todo.title}}:</b1> (Done: {{todo.done}}) (Owned by: {{todo.owner.name}})</li>
+  {% endfor %}
+</ul>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button> type="submit">Save</button>
+</form>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

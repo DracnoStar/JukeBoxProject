@@ -12,5 +12,12 @@ urlpatterns = [
     path('postendpoint', views.post_example, name='post_example'),
     path('submitendpoint', views.submit_example, name='submit_example'),
     path('submitdjango', views.submit_django_form, name='submit_django'),
-    path('templating', views.template_view, name='templating')
+    path('templating', views.template_view, name='templating'),
+    path('todos', views.todos_view, name='todos'),
+    path('person/<int:person_id>', views.person_details, name='person_details'),
+    path('delete_todo/<int:todo_id>', views.delete_todo, name='delete_todo'),
+    path('toggle_todo/<int:todo_id>', views.toggle_todo_done, name='toggle_todo'),
+
+
+
 ]
